@@ -81,6 +81,12 @@ svg {
   font-weight: 600;
 }
 
+.brand-logo {
+  width: 48px;
+  height: auto;
+  display: block;
+}
+
 .brand strong {
   display: block;
   font-size: 1.1rem;
@@ -94,18 +100,6 @@ svg {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.76);
-}
-
-.brand-emblem {
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(135deg, var(--color-lime), var(--color-teal));
-  color: var(--color-navy);
-  font-weight: 700;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
 }
 
 .nav-actions {
