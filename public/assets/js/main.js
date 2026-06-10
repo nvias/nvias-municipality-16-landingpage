@@ -1,248 +1,260 @@
-const links = {
-  app: 'https://example.com/app',
-  downloads: 'https://drive.google.com',
-  contact: 'mailto:info@municipio.eu',
+const participationLinks = {
+  en: 'https://participationindex.eu/en',
+  cs: 'https://participationindex.eu/cs-Cz',
+  lv: 'https://participationindex.eu/lv',
+  sl: 'https://participationindex.eu/sl-Sl',
+};
+
+// Add the public brochures here when their final URLs are available.
+const ruleLinks = {
+  en: null,
+  cs: null,
+  lv: null,
+  sl: null,
+};
+
+const gameTitleArt = {
+  en: 'assets/img/title-municipo.svg',
+  cs: 'assets/img/title-municipo.svg',
+  lv: 'assets/img/title-lv.svg',
+  sl: 'assets/img/title-municipo.svg',
+};
+
+const projectLogos = {
+  en: 'assets/img/logo.svg',
+  cs: 'assets/img/logo.svg',
+  lv: 'assets/img/lv-16plus-logo.png',
+  sl: 'assets/img/logo.svg',
 };
 
 const translations = {
   en: {
-    tagline: 'Co-create your city',
-    heroEyebrow: 'Play · Learn · Change',
-    heroTitle: 'Municipio empowers young people to redesign their neighbourhoods',
-    heroLead:
-      'Municipio is a board game and digital toolkit that helps schools and youth organisations explore civic challenges, design inclusive solutions, and collaborate with their communities.',
-    heroAppLink: 'Open the web application',
-    heroDownloadLink: 'Download materials',
-    aboutTitle: 'About the project',
-    aboutText:
-      'Municipio combines playful learning with real-world impact. The Municipality 16+ partnership co-created the game with educators, municipalities, and young changemakers across Europe to make civic participation tangible, collaborative, and fun.',
-    pillarOneTitle: 'Game-based learning',
-    pillarOneText:
-      'Use storytelling, missions, and role cards inspired by the Municipio board game to explore how cities function and who shapes them.',
-    pillarTwoTitle: 'Digital toolkit',
-    pillarTwoText:
-      'Access a responsive web application with challenge cards, facilitators’ guides, and ready-to-use session plans for hybrid workshops.',
-    pillarThreeTitle: 'Community impact',
-    pillarThreeText:
-      'Prototype solutions for local issues together with students, teachers, and municipal leaders, and keep the momentum with downloadable resources.',
-    howTitle: 'How Municipio sessions work',
-    howIntro:
-      'Each activity is designed to mirror the colourful energy of the Municipio universe—blending the board game aesthetic with digital-first collaboration.',
-    stepOneTitle: 'Discover',
-    stepOneText: 'Set the scene with the game board, place pins around the city, and identify community needs through playful scenarios.',
-    stepTwoTitle: 'Design',
-    stepTwoText: 'Use the web application to unlock missions, brainstorm inclusive ideas, and iterate on prototypes with rapid feedback.',
-    stepThreeTitle: 'Activate',
-    stepThreeText: 'Share action plans with local partners, download handouts, and launch real initiatives in your town or school.',
-    ctaTitle: 'Ready to bring Municipio to your community?',
-    ctaText: 'Start with the digital app or download the facilitation toolkit to run your own Municipio lab.',
-    ctaAppLink: 'Launch the app',
-    ctaDownloadLink: 'Get the download pack',
-    footerText: 'A Municipality 16+ collaboration powered by nvias.org and partners across Europe.',
-    footerAppLink: 'Municipio web application',
-    footerDownloadLink: 'Downloadable resources',
-    footerContactLink: 'Contact the team',
+    heroEyebrow: 'Civic participation tools',
+    heroTitle: 'Municipality 16+',
+    heroText:
+      "Two practical tools for improving young people's civic participation competence.",
+    gatewayTitle: 'Choose a tool',
+    indexNav: 'Participation Index',
+    appNav: 'Municipio App',
+    participationName: 'Participation Index',
+    onlineTool: 'Self-assessment tool',
+    participationText:
+      'Find out what you know about civic participation mechanisms for young people, how to use them, and what experience you have.',
+    participationAction: 'Go to Participation Index',
+    gameLabel: 'Civic Participation Trainer',
+    gameName: 'Municipio',
+    gameText:
+      'A board game that encourages players to explore important mechanisms of civic participation.',
+    gameAction: 'Explore the game',
+    gameDetail:
+      'A board game that encourages players to explore important mechanisms of civic participation.',
+    back: 'Back to tools',
+    rulesTitle: 'Game rules',
+    rulesText: 'Download the rules for the board game in your language.',
+    rulesUnavailable: 'Rules will be added',
+    rulesAction: 'Download rules',
+    appTitle: 'Online application',
+    appText: 'Play the digital version of the Civic Participation Trainer.',
+    appAction: 'Open online application',
+    aboutProjectTitle: 'About the project',
+    aboutProjectText:
+      "Municipality 16+ improves young people's civic participation competence in the use of civic participation mechanisms.",
+    projectLink: 'Visit the project website',
+    partnersTitle: 'Project partners',
+    partnersText:
+      'The project was created through an international partnership of organisations working with young people.',
+    fundingTitle: 'Project funding',
+    fundingText:
+      'Co-funded by the Erasmus+ Programme of the European Union.',
+    fundingDisclaimer:
+      'Funded by the European Union. Views and opinions expressed are however those of the authors only and do not necessarily reflect those of the European Union or the granting authority.',
   },
   cs: {
-    tagline: 'Spoluvytvářej své město',
-    heroEyebrow: 'Hraj · Uč se · Měň',
-    heroTitle: 'Municipio dává mladým lidem sílu přetvářet své okolí',
-    heroLead:
-      'Municipio je desková hra a digitální nástroje, které školám i organizacím práce s mládeží pomáhají zkoumat občanské výzvy, navrhovat inkluzivní řešení a spolupracovat s komunitou.',
-    heroAppLink: 'Otevřít webovou aplikaci',
-    heroDownloadLink: 'Stáhnout materiály',
-    aboutTitle: 'O projektu',
-    aboutText:
-      'Municipio propojuje hravé učení se skutečným dopadem. Partnerství Municipality 16+ vytvořilo hru společně s učiteli, městy a mladými inovátory po celé Evropě, aby byla občanská participace hmatatelná, spolupracující a zábavná.',
-    pillarOneTitle: 'Učení hrou',
-    pillarOneText:
-      'Vyprávějte příběhy, plňte mise a používejte role inspirované deskovou hrou Municipio, abyste lépe pochopili, jak města fungují a kdo je utváří.',
-    pillarTwoTitle: 'Digitální balíček',
-    pillarTwoText:
-      'Získejte responzivní webovou aplikaci s kartami výzev, metodikami a hotovými scénáři pro hybridní workshopy.',
-    pillarThreeTitle: 'Dopad na komunitu',
-    pillarThreeText:
-      'Společně se studenty, učiteli a zástupci města prototypujte řešení místních problémů a pokračujte díky dostupným podkladům.',
-    howTitle: 'Jak probíhá setkání Municipio',
-    howIntro:
-      'Každá aktivita navazuje na energii barevného světa Municipio – propojuje estetiku deskové hry s digitální spoluprací.',
-    stepOneTitle: 'Objevuj',
-    stepOneText: 'Připrav herní plán, rozmísti piny po městě a pomocí hravých scénářů pojmenuj potřeby komunity.',
-    stepTwoTitle: 'Navrhuj',
-    stepTwoText: 'V aplikaci odemykej mise, vymýšlej inkluzivní nápady a rychle je prototypuj díky zpětné vazbě.',
-    stepThreeTitle: 'Aktivuj',
-    stepThreeText: 'Sdílej akční plány s lokálními partnery, stahuj podklady a spouštěj reálné iniciativy ve škole i ve městě.',
-    ctaTitle: 'Připraveni přinést Municipio do své komunity?',
-    ctaText: 'Začni digitální aplikací nebo si stáhni metodický balíček a zorganizuj vlastní Municipio lab.',
-    ctaAppLink: 'Spustit aplikaci',
-    ctaDownloadLink: 'Získat balíček ke stažení',
-    footerText: 'Spolupráce Municipality 16+ za podpory nvias.org a partnerů po celé Evropě.',
-    footerAppLink: 'Webová aplikace Municipio',
-    footerDownloadLink: 'Materiály ke stažení',
-    footerContactLink: 'Kontaktujte tým',
+    heroEyebrow: 'Nástroje občanské participace',
+    heroTitle: 'Municipality 16+',
+    heroText:
+      'Dva praktické nástroje pro rozvoj kompetencí mladých lidí v oblasti občanské participace.',
+    gatewayTitle: 'Vyberte si nástroj',
+    indexNav: 'Index participace',
+    appNav: 'Municipo App',
+    participationName: 'Index participace',
+    onlineTool: 'Sebehodnoticí nástroj',
+    participationText:
+      'Zjistěte, jak znáte mechanismy občanské participace pro mladé lidi, jak je umíte využívat a jaké s nimi máte zkušenosti.',
+    participationAction: 'Přejít na Index participace',
+    gameLabel: 'Trenažér občanské participace',
+    gameName: 'Municipo',
+    gameText:
+      'Objevujte důležité mechanismy občanské participace prostřednictvím deskové hry.',
+    gameAction: 'Prozkoumat hru',
+    gameDetail:
+      'Desková hra, která vybízí hráče k objevování důležitých mechanismů občanské participace.',
+    back: 'Zpět na nástroje',
+    rulesTitle: 'Pravidla hry',
+    rulesText: 'Stáhněte si pravidla deskové hry ve svém jazyce.',
+    rulesUnavailable: 'Pravidla budou doplněna',
+    rulesAction: 'Stáhnout pravidla',
+    appTitle: 'Online aplikace',
+    appText: 'Zahrajte si digitální verzi trenažéru občanské participace.',
+    appAction: 'Otevřít online aplikaci',
+    aboutProjectTitle: 'O projektu',
+    aboutProjectText:
+      'Cílem projektu Municipality 16+ je zlepšit kompetence mladých lidí v oblasti občanské participace a využívání jejích mechanismů.',
+    projectLink: 'Navštívit web projektu',
+    partnersTitle: 'Partneři projektu',
+    partnersText:
+      'Projekt vznikl v mezinárodním partnerství organizací, které pracují s mladými lidmi.',
+    fundingTitle: 'Financování projektu',
+    fundingText:
+      'Spolufinancováno z programu Evropské unie Erasmus+.',
+    fundingDisclaimer:
+      'Financováno Evropskou unií. Vyjádřené názory a stanoviska jsou však pouze názory autorů a nemusí nutně odrážet názory Evropské unie ani poskytovatele grantu.',
   },
   lv: {
-    tagline: 'Līdzradī savu pilsētu',
-    heroEyebrow: 'Spēlē · Mācies · Pārveido',
-    heroTitle: 'Municipio iedrošina jauniešus pārveidot savu apkārtni',
-    heroLead:
-      'Municipio ir galda spēle un digitāls rīkkopums, kas palīdz skolām un jaunatnes organizācijām pētīt pilsoniskos izaicinājumus, veidot iekļaujošus risinājumus un sadarboties ar kopienām.',
-    heroAppLink: 'Atvērt tīmekļa lietotni',
-    heroDownloadLink: 'Lejupielādēt materiālus',
-    aboutTitle: 'Par projektu',
-    aboutText:
-      'Municipio apvieno rotaļīgu mācīšanos ar reālu ietekmi. Municipality 16+ partnerība kopā ar pedagogiem, pašvaldībām un jaunajiem līderiem visā Eiropā radīja spēli, kas padara pilsonisko līdzdalību taustāmu, sadarbības pilnu un aizraujošu.',
-    pillarOneTitle: 'Spēļmācība',
-    pillarOneText:
-      'Izmanto stāstniecību, misijas un lomu kārtis, ko iedvesmojusi Municipio galda spēle, lai izprastu pilsētas darbību un tās veidotājus.',
-    pillarTwoTitle: 'Digitālie rīki',
-    pillarTwoText:
-      'Piekļūsti atsaucīgai tīmekļa lietotnei ar izaicinājumu kartītēm, vadlīnijām un gataviem nodarbību scenārijiem hibrīddarbnīcām.',
-    pillarThreeTitle: 'Kopienas ietekme',
-    pillarThreeText:
-      'Kopā ar skolēniem, skolotājiem un pašvaldībām prototipē risinājumus vietējiem jautājumiem un uzturi virzību ar lejupielādējamiem resursiem.',
-    howTitle: 'Kā norisinās Municipio sesijas',
-    howIntro:
-      'Katra aktivitāte iemieso krāsaino Municipio pasauli – apvienojot galda spēles estētiku ar digitālo sadarbību.',
-    stepOneTitle: 'Atklāj',
-    stepOneText: 'Izvieto spēles laukumu, novieto atzīmes pilsētā un rotaļīgā veidā apzinies kopienas vajadzības.',
-    stepTwoTitle: 'Veido',
-    stepTwoText: 'Lietotnē atslēdz misijas, ģenerē iekļaujošas idejas un ātri tās pārbaudi ar atgriezenisko saiti.',
-    stepThreeTitle: 'Iedaribini',
-    stepThreeText: 'Dalies ar rīcības plāniem, lejupielādē izdales materiālus un uzsāc reālas iniciatīvas savā pilsētā vai skolā.',
-    ctaTitle: 'Gatavi ieviest Municipio savā kopienā?',
-    ctaText: 'Sāc ar digitālo lietotni vai lejupielādē rīkkopu, lai vadītu savu Municipio darbnīcu.',
-    ctaAppLink: 'Palaist lietotni',
-    ctaDownloadLink: 'Saņemt lejupielādes komplektu',
-    footerText: 'Municipality 16+ sadarbība ar nvias.org un partneriem visā Eiropā.',
-    footerAppLink: 'Municipio tīmekļa lietotne',
-    footerDownloadLink: 'Resursi lejupielādei',
-    footerContactLink: 'Sazinies ar komandu',
+    heroEyebrow: 'Pilsoniskās līdzdalības rīki',
+    heroTitle: 'PAŠVALDĪBA 16+',
+    heroText:
+      'Divi praktiski PAŠVALDĪBA 16+ rīki jauniešu pilsoniskās kompetences stiprināšanai.',
+    gatewayTitle: 'Izvēlieties rīku',
+    indexNav: 'Līdzdalības Indekss',
+    appNav: 'Līdzdalības trenažieris',
+    participationName: 'Līdzdalības Indekss',
+    onlineTool: 'Pašnovērtējuma rīks',
+    participationText:
+      'Noskaidro, vai zini un proti izmantot jauniešiem pieejamos līdzdalības mehānismus un kāda ir tava pilsoniskās līdzdalības pieredze.',
+    participationAction: 'Doties uz Līdzdalības Indeksu',
+    gameLabel: 'Pilsoniskās līdzdalības trenažieris',
+    gameName: 'Līdzdalības trenažieris',
+    gameText:
+      'Izpētiet nozīmīgus pilsoniskās līdzdalības mehānismus galda spēlē.',
+    gameAction: 'Izpētīt spēli',
+    gameDetail:
+      'Galda spēle, kas mudina spēlētājus izpētīt nozīmīgus pilsoniskās līdzdalības mehānismus.',
+    back: 'Atpakaļ pie rīkiem',
+    rulesTitle: 'Spēles noteikumi',
+    rulesText: 'Lejupielādējiet galda spēles noteikumus savā valodā.',
+    rulesUnavailable: 'Noteikumi tiks pievienoti',
+    rulesAction: 'Lejupielādēt noteikumus',
+    appTitle: 'Tiešsaistes lietotne',
+    appText: 'Spēlējiet pilsoniskās līdzdalības trenažiera digitālo versiju.',
+    appAction: 'Atvērt tiešsaistes lietotni',
+    aboutProjectTitle: 'Par projektu',
+    aboutProjectText:
+      'Projekta PAŠVALDĪBA 16+ mērķis ir pilnveidot izpratni par jauniešiem pieejamiem pilsoniskās līdzdalības mehānismiem un stiprināt pilsonisko kompetenci.',
+    projectLink: 'Apmeklēt projekta vietni',
+    partnersTitle: 'Projekta partneri',
+    partnersText:
+      'Projektu izveidoja starptautiska organizāciju partnerība, kas strādā ar jauniešiem.',
+    fundingTitle: 'Projekta finansējums',
+    fundingText:
+      'Līdzfinansēts Eiropas Savienības programmas Erasmus+ ietvaros.',
+    fundingDisclaimer:
+      'Finansē Eiropas Savienība. Tomēr paustie uzskati un viedokļi ir tikai autoru uzskati un ne vienmēr atspoguļo Eiropas Savienības vai finansējuma piešķīrējas iestādes nostāju.',
   },
   sl: {
-    tagline: 'Sooblikuj svoje mesto',
-    heroEyebrow: 'Igraj · Uči se · Spreminjaj',
-    heroTitle: 'Municipio mladim daje orodja, da preoblikujejo svojo skupnost',
-    heroLead:
-      'Municipio je namizna igra in digitalni komplet orodij, ki šolam ter mladinskim organizacijam pomaga raziskovati družbene izzive, soustvarjati vključujoče rešitve in graditi partnerstva v lokalnem okolju.',
-    heroAppLink: 'Odpri spletno aplikacijo',
-    heroDownloadLink: 'Prenesi gradiva',
-    aboutTitle: 'O projektu',
-    aboutText:
-      'Municipio povezuje igrivo učenje z resničnim vplivom. Partnerstvo Municipality 16+ je skupaj z učitelji, občinami in mladimi ustvarjalci po vsej Evropi zasnovalo igro, ki omogoča oprijemljivo, sodelovalno in zabavno državljansko udejstvovanje.',
-    pillarOneTitle: 'Učenje skozi igro',
-    pillarOneText:
-      'Uporabite pripovedovanje zgodb, misije in vloge, ki jih navdihuje namizna igra Municipio, ter spoznajte, kako mesta delujejo in kdo jih oblikuje.',
-    pillarTwoTitle: 'Digitalni komplet',
-    pillarTwoText:
-      'Dostopajte do odzivne spletne aplikacije z izzivnimi karticami, vodniki za facilitatorje in pripravljenimi načrti delavnic.',
-    pillarThreeTitle: 'Vpliv na skupnost',
-    pillarThreeText:
-      'Skupaj z učenci, mentorji in predstavniki občin prototipirajte rešitve za lokalne izzive in nadaljujte delo s podporo prenesenih gradiv.',
-    howTitle: 'Kako potekajo srečanja Municipio',
-    howIntro:
-      'Vsaka aktivnost odraža barvito estetiko sveta Municipio – združuje videz namizne igre in digitalno sodelovanje.',
-    stepOneTitle: 'Odkrij',
-    stepOneText: 'Pripravite igralno ploščo, razporedite označevalce po mestu in skozi igrive scenarije spoznajte potrebe skupnosti.',
-    stepTwoTitle: 'Oblikuj',
-    stepTwoText: 'V spletni aplikaciji odklenite misije, soustvarjajte vključujoče ideje in jih hitro izpopolnite s povratnimi informacijami.',
-    stepThreeTitle: 'Oživi',
-    stepThreeText: 'Delite akcijske načrte z lokalnimi partnerji, prenesite gradiva in začnite resnične pobude v šoli ali mestu.',
-    ctaTitle: 'Ste pripravljeni prinesti Municipio v svojo skupnost?',
-    ctaText: 'Začnite s spletno aplikacijo ali prenesite paket za vodenje lastnega Municipio laboratorija.',
-    ctaAppLink: 'Zaženi aplikacijo',
-    ctaDownloadLink: 'Prenesi paket gradiv',
-    footerText: 'Partnerstvo Municipality 16+ v sodelovanju z nvias.org in partnerji po Evropi.',
-    footerAppLink: 'Spletna aplikacija Municipio',
-    footerDownloadLink: 'Gradiva za prenos',
-    footerContactLink: 'Kontaktiraj ekipo',
+    heroEyebrow: 'Orodja za participacijo',
+    heroTitle: 'Municipality 16+',
+    heroText:
+      'Dve praktični orodji za izboljšanje kompetenc mladih na področju participacije.',
+    gatewayTitle: 'Izberite orodje',
+    indexNav: 'Indeks participacije',
+    appNav: 'Municipo App',
+    participationName: 'Indeks participacije',
+    onlineTool: 'Orodje za samoocenjevanje',
+    participationText:
+      'Preverite, kako dobro poznate participativne mehanizme za mlade, kako jih uporabljati in kakšne so vaše izkušnje s participacijo.',
+    participationAction: 'Pojdi na Indeks participacije',
+    gameLabel: 'Trenažer participacije',
+    gameName: 'Municipo',
+    gameText:
+      'Skozi namizno igro raziščite pomembne participativne mehanizme.',
+    gameAction: 'Razišči igro',
+    gameDetail:
+      'Namizna igra, ki igralce spodbuja k raziskovanju pomembnih participativnih mehanizmov.',
+    back: 'Nazaj na orodja',
+    rulesTitle: 'Pravila igre',
+    rulesText: 'Prenesite pravila namizne igre v svojem jeziku.',
+    rulesUnavailable: 'Pravila bodo dodana',
+    rulesAction: 'Prenesi pravila',
+    appTitle: 'Spletna aplikacija',
+    appText: 'Igrajte digitalno različico trenažerja participacije.',
+    appAction: 'Odpri spletno aplikacijo',
+    aboutProjectTitle: 'O projektu',
+    aboutProjectText:
+      'Cilj projekta Municipality 16+ je izboljšati kompetence mladih na področju participacije in uporabe participativnih mehanizmov.',
+    projectLink: 'Obiščite spletno stran projekta',
+    partnersTitle: 'Projektni partnerji',
+    partnersText:
+      'Projekt je nastal v mednarodnem partnerstvu organizacij, ki delajo z mladimi.',
+    fundingTitle: 'Financiranje projekta',
+    fundingText:
+      'Sofinancirano iz programa Evropske unije Erasmus+.',
+    fundingDisclaimer:
+      'Financira Evropska unija. Izražena stališča in mnenja so izključno stališča avtorjev in ne odražajo nujno stališč Evropske unije ali organa, ki je dodelil sredstva.',
   },
 };
 
-const textElements = {
-  tagline: document.getElementById('tagline'),
-  heroEyebrow: document.getElementById('heroEyebrow'),
-  heroTitle: document.getElementById('heroTitle'),
-  heroLead: document.getElementById('heroLead'),
-  heroAppLink: document.getElementById('heroAppLink'),
-  heroDownloadLink: document.getElementById('heroDownloadLink'),
-  aboutTitle: document.getElementById('aboutTitle'),
-  aboutText: document.getElementById('aboutText'),
-  pillarOneTitle: document.getElementById('pillarOneTitle'),
-  pillarOneText: document.getElementById('pillarOneText'),
-  pillarTwoTitle: document.getElementById('pillarTwoTitle'),
-  pillarTwoText: document.getElementById('pillarTwoText'),
-  pillarThreeTitle: document.getElementById('pillarThreeTitle'),
-  pillarThreeText: document.getElementById('pillarThreeText'),
-  howTitle: document.getElementById('howTitle'),
-  howIntro: document.getElementById('howIntro'),
-  stepOneTitle: document.getElementById('stepOneTitle'),
-  stepOneText: document.getElementById('stepOneText'),
-  stepTwoTitle: document.getElementById('stepTwoTitle'),
-  stepTwoText: document.getElementById('stepTwoText'),
-  stepThreeTitle: document.getElementById('stepThreeTitle'),
-  stepThreeText: document.getElementById('stepThreeText'),
-  ctaTitle: document.getElementById('ctaTitle'),
-  ctaText: document.getElementById('ctaText'),
-  ctaAppLink: document.getElementById('ctaAppLink'),
-  ctaDownloadLink: document.getElementById('ctaDownloadLink'),
-  footerText: document.getElementById('footerText'),
-  footerAppLink: document.getElementById('footerAppLink'),
-  footerDownloadLink: document.getElementById('footerDownloadLink'),
-  footerContactLink: document.getElementById('footerContactLink'),
+const getInitialLanguage = () => {
+  const stored = localStorage.getItem('municipality16-language');
+  return stored && translations[stored] ? stored : 'en';
 };
-
-const linkElements = [
-  document.getElementById('navAppLink'),
-  document.getElementById('navDownloadLink'),
-  document.getElementById('heroAppLink'),
-  document.getElementById('heroDownloadLink'),
-  document.getElementById('ctaAppLink'),
-  document.getElementById('ctaDownloadLink'),
-  document.getElementById('footerAppLink'),
-  document.getElementById('footerDownloadLink'),
-  document.getElementById('footerContactLink'),
-];
 
 const updateLanguage = (language) => {
   const copy = translations[language] ?? translations.en;
-  Object.entries(textElements).forEach(([key, element]) => {
-    if (element && copy[key]) {
+
+  document.querySelectorAll('[data-i18n]').forEach((element) => {
+    const key = element.dataset.i18n;
+    if (copy[key]) {
       element.textContent = copy[key];
     }
   });
-};
 
-const applyLinks = () => {
-  linkElements.forEach((element) => {
-    if (!element) return;
-    const id = element.id.toLowerCase();
-    if (id.includes('app')) {
-      element.href = links.app;
-    } else if (id.includes('download')) {
-      element.href = links.downloads;
-    } else if (id.includes('contact')) {
-      element.href = links.contact;
-    }
+  document.querySelectorAll('.participation-link').forEach((link) => {
+    link.href = participationLinks[language] ?? participationLinks.en;
   });
+
+  const rulesLink = document.getElementById('rules-link');
+  if (rulesLink) {
+    const url = ruleLinks[language] ?? ruleLinks.en;
+    if (url) {
+      rulesLink.href = url;
+      rulesLink.target = '_blank';
+      rulesLink.rel = 'noopener';
+      rulesLink.classList.remove('is-disabled');
+      rulesLink.removeAttribute('aria-disabled');
+      rulesLink.querySelector('span').textContent = copy.rulesAction;
+    }
+  }
+
+  const titleArt = document.getElementById('game-title-art');
+  if (titleArt) {
+    titleArt.src = gameTitleArt[language] ?? gameTitleArt.en;
+  }
+
+  const projectLogo = document.getElementById('project-logo');
+  if (projectLogo) {
+    projectLogo.src = projectLogos[language] ?? projectLogos.en;
+  }
+
+  document.documentElement.lang = language;
+  document.title =
+    document.body.dataset.page === 'game'
+      ? `${copy.gameName} | Municipality 16+`
+      : 'Municipality 16+';
 };
-
-const languageSwitcher = document.getElementById('language-switcher');
-
-languageSwitcher.addEventListener('change', (event) => {
-  const selected = event.target.value;
-  updateLanguage(selected);
-  localStorage.setItem('municipio-lang', selected);
-  document.documentElement.lang = selected;
-});
 
 const init = () => {
-  applyLinks();
-  const stored = localStorage.getItem('municipio-lang');
-  const initial = stored && translations[stored] ? stored : 'en';
-  languageSwitcher.value = initial;
-  updateLanguage(initial);
-  document.documentElement.lang = initial;
+  const languageSwitcher = document.getElementById('language-switcher');
+  const initialLanguage = getInitialLanguage();
+
+  languageSwitcher.value = initialLanguage;
+  updateLanguage(initialLanguage);
+
+  languageSwitcher.addEventListener('change', (event) => {
+    const language = event.target.value;
+    localStorage.setItem('municipality16-language', language);
+    updateLanguage(language);
+  });
 };
 
 document.addEventListener('DOMContentLoaded', init);

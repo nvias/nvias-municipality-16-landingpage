@@ -1,13 +1,13 @@
 # Municipio Landing Page
 
-A multilingual landing page for the Municipio board game and digital app, designed to echo the colourful look-and-feel of the Municipality 16+ materials. The site is built as a static bundle that can be served with Nginx and deployed via Docker Compose.
+A multilingual gateway to the two Municipality 16+ tools: Participation Index and the Civic Participation Trainer board game. The site is built as a static bundle that can be served with Nginx and deployed via Docker Compose.
 
 ## Features
 
 - 🌐 Four languages: English, Čeština, Latviešu and Slovenščina.
 - 🎲 Visuals inspired by the Municipio board-game box and mobile app colour palette.
 - 📱 Responsive layout that works on desktop, tablet and mobile viewports.
-- 🔗 Quick access buttons to the web application and Google Drive downloadables.
+- 🔗 A direct route to Participation Index and a dedicated game page with rules and the online application.
 - ⚙️ Lightweight vanilla JavaScript for instant translation switching and link management.
 
 ## Project structure
@@ -47,7 +47,7 @@ Then open <http://localhost:8080> in your browser.
 
 ## Customising links
 
-Edit `public/assets/js/main.js` and replace the placeholder values in the `links` object with the real URLs for the Municipio web application and Google Drive folder. The language strings can also be adjusted in the same file if you need to refine the translations.
+Edit `public/assets/js/main.js` to manage all destinations. Add the public game-rule URLs to the `ruleLinks` object; each language has its own brochure. Until a URL is added, the game page clearly marks the rules as forthcoming.
 
 ## Deployment
 

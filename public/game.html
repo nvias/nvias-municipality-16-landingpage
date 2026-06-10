@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Municipality 16+ tools for civic participation."
+      content="Civic Participation Trainer board game and online application."
     />
-    <title>Municipality 16+</title>
+    <title>Civic Participation Trainer | Municipality 16+</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   </head>
-  <body data-page="home">
+  <body data-page="game">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Municipality 16+">
         <img id="project-logo" src="assets/img/logo.svg" alt="" />
@@ -54,51 +54,47 @@
     </header>
 
     <main>
-      <section class="hero home-hero">
+      <section class="hero game-hero">
         <div class="container hero-copy">
-          <p class="eyebrow" data-i18n="heroEyebrow"></p>
-          <h1 data-i18n="heroTitle"></h1>
-          <p class="hero-lead" data-i18n="heroText"></p>
+          <p class="eyebrow" data-i18n="gameLabel"></p>
+          <div class="game-hero-layout">
+            <div>
+              <h1 data-i18n="gameName"></h1>
+              <p class="hero-lead" data-i18n="gameDetail"></p>
+            </div>
+            <img
+              class="game-title-art"
+              id="game-title-art"
+              src="assets/img/title-municipo.svg"
+              alt=""
+            />
+          </div>
         </div>
       </section>
 
-      <section class="gateway" aria-labelledby="gateway-title">
-        <div class="container">
-          <h2 class="sr-only" id="gateway-title" data-i18n="gatewayTitle"></h2>
-          <div class="gateway-grid">
+      <section class="game-options">
+        <div class="container option-grid">
+          <article class="option-card">
+            <span class="option-number">01</span>
+            <h2 data-i18n="rulesTitle"></h2>
+            <p data-i18n="rulesText"></p>
+            <a class="button is-disabled" id="rules-link" aria-disabled="true">
+              <span data-i18n="rulesUnavailable"></span>
+            </a>
+          </article>
+
+          <article class="option-card option-card-featured">
+            <span class="option-number">02</span>
+            <h2 data-i18n="appTitle"></h2>
+            <p data-i18n="appText"></p>
             <a
-              class="gateway-card gateway-card-index participation-link"
-              href="https://participationindex.eu/en"
+              class="button"
+              href="https://app.municipality16plus.eu/"
               target="_blank"
               rel="noopener"
-            >
-              <div class="gateway-card-content">
-                <span class="card-label" data-i18n="onlineTool"></span>
-                <h2 data-i18n="participationName"></h2>
-                <p data-i18n="participationText"></p>
-                <span class="card-action" data-i18n="participationAction"></span>
-              </div>
-              <img
-                class="gateway-card-image"
-                src="assets/img/participation-index-card.jpg"
-                alt=""
-              />
-            </a>
-
-            <a class="gateway-card gateway-card-game" href="game.html">
-              <div class="gateway-card-content">
-                <span class="card-label" data-i18n="gameLabel"></span>
-                <h2 data-i18n="gameName"></h2>
-                <p data-i18n="gameText"></p>
-                <span class="card-action" data-i18n="gameAction"></span>
-              </div>
-              <img
-                class="gateway-card-image"
-                src="assets/img/game-board-card.jpg"
-                alt=""
-              />
-            </a>
-          </div>
+              data-i18n="appAction"
+            ></a>
+          </article>
         </div>
       </section>
     </main>
