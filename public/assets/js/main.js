@@ -5,12 +5,18 @@ const participationLinks = {
   sl: 'https://participationindex.eu/sl-Sl',
 };
 
-// Add the public brochures here when their final URLs are available.
+const appLinks = {
+  en: 'https://app.municipality16plus.eu/?lang=en',
+  cs: 'https://app.municipality16plus.eu/?lang=cs',
+  lv: 'https://app.municipality16plus.eu/?lang=lv',
+  sl: 'https://app.municipality16plus.eu/?lang=sl',
+};
+
 const ruleLinks = {
-  en: null,
-  cs: null,
-  lv: null,
-  sl: null,
+  en: 'assets/downloads/municipo-brochure-en.pdf',
+  cs: 'assets/downloads/municipo-brochure-cz.pdf',
+  lv: 'assets/downloads/municipo-brochure-lv.pdf',
+  sl: 'assets/downloads/municipo-brochure-sl.pdf',
 };
 
 const gameTitleArt = {
@@ -32,29 +38,44 @@ const translations = {
     heroEyebrow: 'Civic participation tools',
     heroTitle: 'Municipality 16+',
     heroText:
-      "Two practical tools for improving young people's civic participation competence.",
+      "Practical tools for improving young people's civic participation competence.",
     gatewayTitle: 'Choose a tool',
     indexNav: 'Participation Index',
-    appNav: 'Municipio App',
+    appNav: 'Municipo App',
     participationName: 'Participation Index',
     onlineTool: 'Self-assessment tool',
     participationText:
       'Find out what you know about civic participation mechanisms for young people, how to use them, and what experience you have.',
     participationAction: 'Go to Participation Index',
     gameLabel: 'Civic Participation Trainer',
-    gameName: 'Municipio',
+    gameName: 'Municipo',
     gameText:
-      'A board game that encourages players to explore important mechanisms of civic participation.',
+      'A board game that encourages players to explore important mechanisms of civic participation. Players try out how participation can work in practice.',
     gameAction: 'Explore the game',
     gameDetail:
-      'A board game that encourages players to explore important mechanisms of civic participation.',
+      'A board game that encourages players to explore important mechanisms of civic participation. The game can be played with the support of the digital application.',
     back: 'Back to tools',
+    appSupportLabel: 'Digital game support',
+    appSupportName: 'Playing with the app',
+    appSupportText:
+      'Use the digital application while playing Municipo. It supports the game experience and guides players through the digital version of the Civic Participation Trainer.',
+    appSupportAction: 'Learn how to play',
+    gameIntroLabel: 'Board game and digital support',
+    gameIntroTitle: 'Play Municipo with the support of the digital application',
+    gameIntroText:
+      'Municipo is a board game supported by a digital application. Players use the application during the game to follow the digital version of the Civic Participation Trainer.',
+    getGameTitle: 'Get the board game',
+    getGameText:
+      'To play Municipo as a board game, contact the project partner in your country or the Municipality 16+ project team.',
+    getGameAction: 'Visit the project website',
     rulesTitle: 'Game rules',
-    rulesText: 'Download the rules for the board game in your language.',
+    rulesText:
+      'Download the game brochure in your language. It includes the board game rules and information about civic participation mechanisms.',
     rulesUnavailable: 'Rules will be added',
     rulesAction: 'Download rules',
     appTitle: 'Online application',
-    appText: 'Play the digital version of the Civic Participation Trainer.',
+    appText:
+      'Use the digital application while playing Municipo. It supports the game experience and guides players through the digital version of the Civic Participation Trainer.',
     appAction: 'Open online application',
     aboutProjectTitle: 'About the project',
     aboutProjectText:
@@ -73,48 +94,63 @@ const translations = {
     heroEyebrow: 'Nástroje občanské participace',
     heroTitle: 'Municipality 16+',
     heroText:
-      'Dva praktické nástroje pro rozvoj kompetencí mladých lidí v oblasti občanské participace.',
+      'Praktické nástroje pro rozvoj kompetencí mladých lidí v\u00a0oblasti občanské participace.',
     gatewayTitle: 'Vyberte si nástroj',
     indexNav: 'Index participace',
     appNav: 'Municipo App',
     participationName: 'Index participace',
     onlineTool: 'Sebehodnoticí nástroj',
     participationText:
-      'Zjistěte, jak znáte mechanismy občanské participace pro mladé lidi, jak je umíte využívat a jaké s nimi máte zkušenosti.',
-    participationAction: 'Přejít na Index participace',
+      'Zjistěte, jak znáte mechanismy občanské participace pro mladé lidi, jak je umíte využívat a\u00a0jaké s\u00a0nimi máte zkušenosti.',
+    participationAction: 'Přejít na\u00a0Index participace',
     gameLabel: 'Trenažér občanské participace',
     gameName: 'Municipo',
     gameText:
-      'Objevujte důležité mechanismy občanské participace prostřednictvím deskové hry.',
+      'Objevujte důležité mechanismy občanské participace prostřednictvím deskové hry. Hráči si vyzkoušejí, jak může participace fungovat v\u00a0praxi.',
     gameAction: 'Prozkoumat hru',
     gameDetail:
-      'Desková hra, která vybízí hráče k objevování důležitých mechanismů občanské participace.',
+      'Desková hra, která vybízí hráče k\u00a0objevování důležitých mechanismů občanské participace. Hru lze hrát s\u00a0podporou digitální aplikace.',
     back: 'Zpět na nástroje',
+    appSupportLabel: 'Digitální podpora hry',
+    appSupportName: 'Hraní s\u00a0aplikací',
+    appSupportText:
+      'Použijte digitální aplikaci při hraní hry Municipo. Aplikace podporuje herní zážitek a\u00a0provází hráče digitální verzí trenažéru občanské participace.',
+    appSupportAction: 'Jak hrát s\u00a0aplikací',
+    gameIntroLabel: 'Desková hra a\u00a0digitální podpora',
+    gameIntroTitle: 'Hrajte Municipo s\u00a0podporou digitální aplikace',
+    gameIntroText:
+      'Municipo je desková hra podporovaná digitální aplikací. Hráči aplikaci používají během hry jako průvodce digitální verzí trenažéru občanské participace.',
+    getGameTitle: 'Získat deskovou hru',
+    getGameText:
+      'Pokud chcete hrát Municipo jako deskovou hru, kontaktujte projektového partnera ve\u00a0své zemi nebo tým Municipality 16+.',
+    getGameAction: 'Navštívit web projektu',
     rulesTitle: 'Pravidla hry',
-    rulesText: 'Stáhněte si pravidla deskové hry ve svém jazyce.',
+    rulesText:
+      'Stáhněte si brožuru ke\u00a0hře ve\u00a0svém jazyce. Najdete v\u00a0ní pravidla deskové hry i\u00a0informace o\u00a0mechanismech občanské participace.',
     rulesUnavailable: 'Pravidla budou doplněna',
     rulesAction: 'Stáhnout pravidla',
     appTitle: 'Online aplikace',
-    appText: 'Zahrajte si digitální verzi trenažéru občanské participace.',
+    appText:
+      'Použijte digitální aplikaci při hraní hry Municipo. Aplikace podporuje herní zážitek a\u00a0provází hráče digitální verzí trenažéru občanské participace.',
     appAction: 'Otevřít online aplikaci',
-    aboutProjectTitle: 'O projektu',
+    aboutProjectTitle: 'O\u00a0projektu',
     aboutProjectText:
-      'Cílem projektu Municipality 16+ je zlepšit kompetence mladých lidí v oblasti občanské participace a využívání jejích mechanismů.',
+      'Cílem projektu Municipality 16+ je zlepšit kompetence mladých lidí v\u00a0oblasti občanské participace a\u00a0využívání jejích mechanismů.',
     projectLink: 'Navštívit web projektu',
     partnersTitle: 'Partneři projektu',
     partnersText:
-      'Projekt vznikl v mezinárodním partnerství organizací, které pracují s mladými lidmi.',
+      'Projekt vznikl v\u00a0mezinárodním partnerství organizací, které pracují s\u00a0mladými lidmi.',
     fundingTitle: 'Financování projektu',
     fundingText:
-      'Spolufinancováno z programu Evropské unie Erasmus+.',
+      'Spolufinancováno z\u00a0programu Evropské unie Erasmus+.',
     fundingDisclaimer:
-      'Financováno Evropskou unií. Vyjádřené názory a stanoviska jsou však pouze názory autorů a nemusí nutně odrážet názory Evropské unie ani poskytovatele grantu.',
+      'Financováno Evropskou unií. Vyjádřené názory a\u00a0stanoviska jsou však pouze názory autorů a\u00a0nemusí nutně odrážet názory Evropské unie ani poskytovatele grantu.',
   },
   lv: {
     heroEyebrow: 'Pilsoniskās līdzdalības rīki',
     heroTitle: 'PAŠVALDĪBA 16+',
     heroText:
-      'Divi praktiski PAŠVALDĪBA 16+ rīki jauniešu pilsoniskās kompetences stiprināšanai.',
+      'Praktiski PAŠVALDĪBA 16+ rīki jauniešu pilsoniskās kompetences stiprināšanai.',
     gatewayTitle: 'Izvēlieties rīku',
     indexNav: 'Līdzdalības Indekss',
     appNav: 'Līdzdalības trenažieris',
@@ -126,17 +162,32 @@ const translations = {
     gameLabel: 'Pilsoniskās līdzdalības trenažieris',
     gameName: 'Līdzdalības trenažieris',
     gameText:
-      'Izpētiet nozīmīgus pilsoniskās līdzdalības mehānismus galda spēlē.',
+      'Izpētiet nozīmīgus pilsoniskās līdzdalības mehānismus galda spēlē. Spēlētāji izmēģina, kā līdzdalība var darboties praksē.',
     gameAction: 'Izpētīt spēli',
     gameDetail:
-      'Galda spēle, kas mudina spēlētājus izpētīt nozīmīgus pilsoniskās līdzdalības mehānismus.',
+      'Galda spēle, kas mudina spēlētājus izpētīt nozīmīgus pilsoniskās līdzdalības mehānismus. Spēli var spēlēt ar digitālās lietotnes atbalstu.',
     back: 'Atpakaļ pie rīkiem',
+    appSupportLabel: 'Digitālais spēles atbalsts',
+    appSupportName: 'Spēle ar lietotni',
+    appSupportText:
+      'Izmantojiet digitālo lietotni, spēlējot līdzdalības trenažieri. Tā atbalsta spēles norisi un palīdz spēlētājiem izmantot pilsoniskās līdzdalības trenažiera digitālo versiju.',
+    appSupportAction: 'Uzzināt, kā spēlēt',
+    gameIntroLabel: 'Galda spēle un digitālais atbalsts',
+    gameIntroTitle: 'Spēlējiet līdzdalības trenažieri ar digitālās lietotnes atbalstu',
+    gameIntroText:
+      'Līdzdalības trenažieris ir galda spēle, ko atbalsta digitāla lietotne. Spēlētāji izmanto lietotni spēles laikā kā pilsoniskās līdzdalības trenažiera digitālās versijas ceļvedi.',
+    getGameTitle: 'Iegūt galda spēli',
+    getGameText:
+      'Lai spēlētu līdzdalības trenažieri kā galda spēli, sazinieties ar projekta partneri savā valstī vai PAŠVALDĪBA 16+ projekta komandu.',
+    getGameAction: 'Apmeklēt projekta vietni',
     rulesTitle: 'Spēles noteikumi',
-    rulesText: 'Lejupielādējiet galda spēles noteikumus savā valodā.',
+    rulesText:
+      'Lejupielādējiet spēles brošūru savā valodā. Tajā ir galda spēles noteikumi un informācija par pilsoniskās līdzdalības mehānismiem.',
     rulesUnavailable: 'Noteikumi tiks pievienoti',
     rulesAction: 'Lejupielādēt noteikumus',
     appTitle: 'Tiešsaistes lietotne',
-    appText: 'Spēlējiet pilsoniskās līdzdalības trenažiera digitālo versiju.',
+    appText:
+      'Izmantojiet digitālo lietotni, spēlējot līdzdalības trenažieri. Tā atbalsta spēles norisi un palīdz spēlētājiem izmantot pilsoniskās līdzdalības trenažiera digitālo versiju.',
     appAction: 'Atvērt tiešsaistes lietotni',
     aboutProjectTitle: 'Par projektu',
     aboutProjectText:
@@ -155,37 +206,51 @@ const translations = {
     heroEyebrow: 'Orodja za participacijo',
     heroTitle: 'Municipality 16+',
     heroText:
-      'Dve praktični orodji za izboljšanje kompetenc mladih na področju participacije.',
+      'Praktična orodja za izboljšanje kompetenc mladih na področju participacije.',
     gatewayTitle: 'Izberite orodje',
     indexNav: 'Indeks participacije',
     appNav: 'Municipo App',
     participationName: 'Indeks participacije',
     onlineTool: 'Orodje za samoocenjevanje',
     participationText:
-      'Preverite, kako dobro poznate participativne mehanizme za mlade, kako jih uporabljati in kakšne so vaše izkušnje s participacijo.',
+      'Preverite, kako dobro poznate participativne mehanizme za mlade, kako jih uporabljati in kakšne so vaše izkušnje s\u00a0participacijo.',
     participationAction: 'Pojdi na Indeks participacije',
-    gameLabel: 'Trenažer participacije',
+    gameLabel: 'Simulacijska igra',
     gameName: 'Municipo',
     gameText:
-      'Skozi namizno igro raziščite pomembne participativne mehanizme.',
+      'Skozi namizno igro raziščite pomembne participativne mehanizme. Igralci preizkusijo, kako lahko participacija deluje v\u00a0praksi.',
     gameAction: 'Razišči igro',
     gameDetail:
-      'Namizna igra, ki igralce spodbuja k raziskovanju pomembnih participativnih mehanizmov.',
+      'Namizna igra, ki igralce spodbuja k\u00a0raziskovanju pomembnih participativnih mehanizmov. Igro lahko igrate s\u00a0podporo digitalne aplikacije.',
     back: 'Nazaj na orodja',
+    appSupportLabel: 'Digitalna podpora igri',
+    appSupportName: 'Igranje z\u00a0aplikacijo',
+    appSupportText:
+      'Uporabite digitalno aplikacijo med igranjem igre MUNICIPO. Aplikacija podpira igralno izkušnjo in igralce vodi skozi digitalno različico igre MUNICIPO.',
+    appSupportAction: 'Kako igrati z\u00a0aplikacijo',
+    gameIntroLabel: 'Namizna igra in digitalna podpora',
+    gameIntroTitle: 'Igrajte Municipo s\u00a0podporo digitalne aplikacije',
+    gameIntroText:
+      'Municipo je namizna igra, podprta z\u00a0digitalno aplikacijo. Igralci aplikacijo uporabljajo med igro kot vodnik skozi digitalno različico igre MUNICIPO.',
+    getGameTitle: 'Pridobite namizno igro',
+    getGameText:
+      'Za igranje igre Municipo kot namizne igre se obrnite na projektnega partnerja v\u00a0svoji državi ali ekipo Municipality 16+.',
+    getGameAction: 'Obiščite projekt',
     rulesTitle: 'Pravila igre',
-    rulesText: 'Prenesite pravila namizne igre v svojem jeziku.',
+    rulesText:
+      'Prenesite brošuro igre v\u00a0svojem jeziku. Vključuje pravila namizne igre in informacije o\u00a0participativnih mehanizmih.',
     rulesUnavailable: 'Pravila bodo dodana',
     rulesAction: 'Prenesi pravila',
     appTitle: 'Spletna aplikacija',
-    appText: 'Igrajte digitalno različico trenažerja participacije.',
+    appText: 'Igrajte digitalno različico igre MUNICIPO.',
     appAction: 'Odpri spletno aplikacijo',
-    aboutProjectTitle: 'O projektu',
+    aboutProjectTitle: 'O\u00a0projektu',
     aboutProjectText:
       'Cilj projekta Municipality 16+ je izboljšati kompetence mladih na področju participacije in uporabe participativnih mehanizmov.',
-    projectLink: 'Obiščite spletno stran projekta',
+    projectLink: 'Obiščite projekt',
     partnersTitle: 'Projektni partnerji',
     partnersText:
-      'Projekt je nastal v mednarodnem partnerstvu organizacij, ki delajo z mladimi.',
+      'Projekt je nastal v\u00a0mednarodnem partnerstvu organizacij, ki delajo z\u00a0mladimi.',
     fundingTitle: 'Financiranje projekta',
     fundingText:
       'Sofinancirano iz programa Evropske unije Erasmus+.',
@@ -211,6 +276,10 @@ const updateLanguage = (language) => {
 
   document.querySelectorAll('.participation-link').forEach((link) => {
     link.href = participationLinks[language] ?? participationLinks.en;
+  });
+
+  document.querySelectorAll('.app-link').forEach((link) => {
+    link.href = appLinks[language] ?? appLinks.en;
   });
 
   const rulesLink = document.getElementById('rules-link');

@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260714-7" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   </head>
   <body data-page="game">
@@ -34,8 +34,8 @@
             data-i18n="indexNav"
           ></a>
           <a
-            class="header-button header-button-primary"
-            href="https://app.municipality16plus.eu/"
+            class="header-button header-button-primary app-link"
+            href="https://app.municipality16plus.eu/?lang=en"
             target="_blank"
             rel="noopener"
             data-i18n="appNav"
@@ -72,10 +72,38 @@
         </div>
       </section>
 
+      <section class="game-intro">
+        <div class="container game-intro-panel">
+          <p class="section-label" data-i18n="gameIntroLabel">Board game and digital support</p>
+          <h2 data-i18n="gameIntroTitle">Play Municipo with the support of the digital application</h2>
+          <p data-i18n="gameIntroText">
+            Municipo is a board game supported by a digital application. Players
+            use the application during the game to follow the digital version of
+            the Civic Participation Trainer.
+          </p>
+        </div>
+      </section>
+
       <section class="game-options">
         <div class="container option-grid">
           <article class="option-card">
             <span class="option-number">01</span>
+            <h2 data-i18n="getGameTitle">Get the board game</h2>
+            <p data-i18n="getGameText">
+              To play Municipo as a board game, contact the project partner in
+              your country or the Municipality 16+ project team.
+            </p>
+            <a
+              class="button"
+              href="https://youth.delna.lv/"
+              target="_blank"
+              rel="noopener"
+              data-i18n="getGameAction"
+            >Visit the project website</a>
+          </article>
+
+          <article class="option-card">
+            <span class="option-number">02</span>
             <h2 data-i18n="rulesTitle"></h2>
             <p data-i18n="rulesText"></p>
             <a class="button is-disabled" id="rules-link" aria-disabled="true">
@@ -84,12 +112,12 @@
           </article>
 
           <article class="option-card option-card-featured">
-            <span class="option-number">02</span>
+            <span class="option-number">03</span>
             <h2 data-i18n="appTitle"></h2>
             <p data-i18n="appText"></p>
             <a
-              class="button"
-              href="https://app.municipality16plus.eu/"
+              class="button app-link"
+              href="https://app.municipality16plus.eu/?lang=en"
               target="_blank"
               rel="noopener"
               data-i18n="appAction"
@@ -125,14 +153,22 @@
       <div class="container logo-strip" aria-label="Project partners and funding">
         <img src="assets/img/logo_01.svg" alt="Agency for International Programs for Youth" />
         <img src="assets/img/logo_02.svg" alt="European Union" />
-        <img src="assets/img/logo_03.svg" alt="Transparency International Latvia – Delna" />
-        <img src="assets/img/logo_04.svg" alt="European Movement Latvia" />
-        <img class="logo-wide" src="assets/img/Nvias_R.svg" alt="NVIAS" />
-        <img src="assets/img/logo_06.svg" alt="PiNA" />
+        <a href="https://delna.lv/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/logo_03.svg" alt="Transparency International Latvia – Delna" />
+        </a>
+        <a href="https://eiropaskustiba.lv/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/logo_04.svg" alt="European Movement Latvia" />
+        </a>
+        <a href="http://nvias.org/" target="_blank" rel="noopener noreferrer">
+          <img class="logo-wide" src="assets/img/Nvias_R.svg" alt="NVIAS" />
+        </a>
+        <a href="https://www.pina.si/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/logo_06.svg" alt="PiNA" />
+        </a>
       </div>
       <div class="container footer-bottom">Municipality 16+</div>
     </footer>
 
-    <script src="assets/js/main.js" type="module"></script>
+    <script src="assets/js/main.js?v=20260714-7" type="module"></script>
   </body>
 </html>

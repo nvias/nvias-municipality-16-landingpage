@@ -66,8 +66,8 @@ a {
 }
 
 .brand img {
-  width: 48px;
-  height: 45px;
+  width: 96px;
+  height: 90px;
   object-fit: contain;
 }
 
@@ -226,7 +226,7 @@ a {
 .gateway-grid,
 .option-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
   gap: clamp(1.4rem, 3vw, 2.5rem);
 }
 
@@ -285,6 +285,10 @@ a {
   border-top: 8px solid var(--teal);
 }
 
+.gateway-card-app {
+  border-top: 8px solid var(--lime);
+}
+
 .card-label {
   color: var(--blue);
   font-size: 0.78rem;
@@ -294,9 +298,9 @@ a {
 }
 
 .gateway-card h2 {
-  max-width: 12ch;
+  max-width: 14ch;
   margin: 1rem 0;
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-size: clamp(1.7rem, 2.6vw, 2.7rem);
   line-height: 1.08;
 }
 
@@ -338,12 +342,53 @@ a {
 }
 
 .game-options {
-  padding: clamp(4rem, 8vw, 7rem) 0;
+  padding: clamp(2rem, 5vw, 3rem) 0 clamp(4rem, 8vw, 7rem);
   background: var(--sand);
 }
 
+.game-intro {
+  position: relative;
+  z-index: 2;
+  margin-top: -110px;
+  padding: 0;
+  background: linear-gradient(to bottom, transparent 0 110px, var(--sand) 110px);
+}
+
+.game-intro-panel {
+  max-width: 860px;
+  border-radius: 28px;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.section-label {
+  margin: 0 0 0.75rem;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.game-intro h2 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+}
+
+.game-intro p:last-child {
+  max-width: 720px;
+  margin: 1.2rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+}
+
 .option-card {
+  display: flex;
   min-height: 330px;
+  flex-direction: column;
   border-radius: 24px;
   padding: clamp(2rem, 4vw, 3rem);
   background: var(--white);
@@ -369,8 +414,13 @@ a {
 }
 
 .option-card p {
-  min-height: 5rem;
+  min-height: 7rem;
   margin-bottom: 2rem;
+}
+
+.option-card .button {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .button {
@@ -458,6 +508,10 @@ a {
   background: var(--white);
 }
 
+.logo-strip a {
+  display: block;
+}
+
 .logo-strip .logo-wide {
   padding: 1rem 0.7rem;
 }
@@ -487,6 +541,11 @@ a {
 @media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
+  }
+
+  .brand img {
+    width: 80px;
+    height: 75px;
   }
 
   .brand strong {
@@ -537,6 +596,11 @@ a {
 
   .gateway::before {
     top: 80px;
+  }
+
+  .game-intro {
+    margin-top: -70px;
+    background: linear-gradient(to bottom, transparent 0 70px, var(--sand) 70px);
   }
 
   .gateway-card {
